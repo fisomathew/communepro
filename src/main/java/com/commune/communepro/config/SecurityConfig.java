@@ -14,8 +14,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserDetailsService userDetailsService;
 
-    @Autowired
-    BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -34,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/css/**" ,"/fonts/**", "/img/**", "/js/**", "/index").permitAll()
-                .antMatchers("/pboard/**").hasRole("Board")
+                //.antMatchers("/pboard/**").hasRole("Board")
                 .and()
                 .formLogin()
                 .loginPage("/login").failureUrl("/login-error").and()
