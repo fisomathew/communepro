@@ -1391,7 +1391,7 @@ table.dataTable thead .sorting_desc_disabled:after,
 .page-with-light-sidebar.page-sidebar-minified .sidebar .nav > li.active:hover > a,
 .page-with-light-sidebar.page-sidebar-minified .sidebar .nav > li.active:focus > a {
 	color: #2d353c;
-	background: #E6E9EA;
+	background: #bcc4c6;
 	font-weight: 600;
 }
 .flat-black .page-with-light-sidebar .sidebar .nav > li.active > a,
@@ -13002,4 +13002,18 @@ a.text-green:focus {
 }
 .selcted-element-class {
     border:solid 1px #49b6d6 !important;
+}
+
+/************** CUSTOM *****************/
+.toolbar1{
+    font-size:15px;
+}
+.toolbar1 .panel-heading{
+    padding: 9px 10px 1px 1px;
+}
+.card-box{
+    padding: 10px 10px 10px 20px;
+}
+.planner-box{
+    padding: 10px;
 }
