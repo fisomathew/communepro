@@ -225,7 +225,7 @@ html {
 	height: 100%;
 }
 body {
-	background: #d9e0e7;
+	background: #fff;
 	font-size: 12px;
 	font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
 	color: #707478;
@@ -279,7 +279,7 @@ hr {
 
 .fc button .fc-icon,
 .datepicker th.prev,
-.datepicker th.next,
+.datepicker th.next
 .top-menu li > a .caret,
 .gallery .rating span.star,
 .wysihtml5-toolbar .glyphicon,
@@ -1218,7 +1218,7 @@ table.dataTable thead .sorting_desc_disabled:after,
 	width: 60px;
 }
 .page-sidebar-minified .content {
-	margin-left: 60px;
+	margin-left: 30px;
 }
 .page-sidebar-minified .footer {
 	margin-left: 85px;
@@ -1345,7 +1345,7 @@ table.dataTable thead .sorting_desc_disabled:after,
 
 .page-with-light-sidebar .sidebar,
 .page-with-light-sidebar .sidebar-bg {
-	background: #fff;
+	background: #d9e0e7;
 }
 .page-with-light-sidebar .sidebar .nav > li > a,
 .flat-black .page-with-light-sidebar .sidebar .nav > li > a {
@@ -1775,8 +1775,8 @@ table.dataTable thead .sorting_desc_disabled:after,
 /* 3.4 Page Content */
 
 .content {
-	/*margin-left: 220px;*/
-	padding: 20px 30px;
+	margin-left: 190px;
+	padding: 0 0 20px 30px;
 }
 .content.content-full-width {
 	padding: 0;
@@ -3815,8 +3815,8 @@ legend {
 .panel-heading {
 	padding: 10px 15px;
 	border: none;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	/**border-top-left-radius: 3px;
+	border-top-right-radius: 3px;**/
 }
 .panel-heading + .table,
 .panel-heading + .slimScrollDiv {
