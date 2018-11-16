@@ -13005,6 +13005,9 @@ a.text-green:focus {
 }
 
 /************** CUSTOM *****************/
+.light-text{
+    color:#667178;
+}
 .toolbar1{
     font-size:15px;
 }
@@ -13016,4 +13019,19 @@ a.text-green:focus {
 }
 .planner-box{
     padding: 10px;
+}
+.leftbar-minify-btn{
+    margin: 10px 0;
+    float: right;
+    padding: 5px 8px 5px 8px !important;
+    background: #d3d6d9;
+    color: #fff;
+    border-radius: 20px 0 0 20px;
+}
+.leftbar-minify-btn:hover{
+    background: #919395;
+    color:#fff;
+}
+.panel.panel-expand {
+    top: 35px;
 }
