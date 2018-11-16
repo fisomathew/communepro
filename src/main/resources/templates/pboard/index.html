@@ -249,9 +249,40 @@
                                         <b class="fas fa-plus"></b>
 
                                     </button>
-                                    <ul class="dropdown-menu pull-right w-100">
-                                        <li>ABC</li>
-                                    </ul>
+
+                                    <div class="dropdown-menu pull-right p-0 w-100" id="pborad-filter">
+
+                                        <a href="#" class="list-group-item w-100">
+                                            <div class="checkbox checkbox-css checkbox-inline">
+                                                <input type="checkbox" value="" id="inlineCssCheckbox1" checked="">
+                                                <label></label>
+
+                                            </div>
+                                            Planned
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="checkbox checkbox-css checkbox-inline">
+                                                <input type="checkbox" value="" id="inlineCssCheckbox2" checked="">
+                                                <label></label>
+                                            </div>
+                                            Unplanned
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="checkbox checkbox-css checkbox-inline">
+                                                <input type="checkbox" value="" id="inlineCssCheckbox3">
+                                                <label></label>
+                                            </div>
+                                            Urgent
+                                        </a>
+                                        <h5 class="light-text m-5 pl-2 text-info">Teams</h5>
+                                        <a href="#" class="list-group-item">
+                                            <div class="checkbox checkbox-css checkbox-inline">
+                                                <input type="checkbox" value="" id="inlineCssCheckbox4">
+                                                <label></label>
+                                            </div>
+                                            Malabar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-1 text-right pr-0">
@@ -561,6 +592,29 @@
 			    },
 			});
 		});
+
+		var options = [];
+
+        $( '#pborad-filter a' ).on( 'click', function( event ) {
+
+           var $target = $( event.currentTarget ),
+               val = $target.attr( 'data-value' ),
+               $inp = $target.find( 'input' ),
+               idx;
+
+           if ( ( idx = options.indexOf( val ) ) > -1 ) {
+              options.splice( idx, 1 );
+              setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+           } else {
+              options.push( val );
+              setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+           }
+
+           $( event.target ).blur();
+
+           console.log( options );
+           return false;
+        });
 	</script>
 </body>
 </html>
