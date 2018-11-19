@@ -13,4 +13,10 @@ public class PBoardController {
         modelAndView.setViewName("pboard/index");
         return modelAndView;
     }
+    @RequestMapping("/user")
+    public ModelAndView userIndex(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("user/user_index.html");
+        return modelAndView;
+    }
 }
