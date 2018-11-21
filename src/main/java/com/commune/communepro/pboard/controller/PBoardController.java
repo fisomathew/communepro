@@ -19,4 +19,11 @@ public class PBoardController {
         modelAndView.setViewName("user/user_index.html");
         return modelAndView;
     }
+
+    @RequestMapping("/department")
+    public ModelAndView departmentIndex(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("department/department_index.html");
+        return modelAndView;
+    }
 }
