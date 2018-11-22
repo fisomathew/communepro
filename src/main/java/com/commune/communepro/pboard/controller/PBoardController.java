@@ -20,24 +20,5 @@ public class PBoardController {
         return modelAndView;
     }
 
-    @RequestMapping("/department")
-    public ModelAndView departmentIndex(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("department/department_index.html");
-        return modelAndView;
-    }
-    @RequestMapping("/departmentlist")
-    public ModelAndView departmentList(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("department/department_list.html :: list");
-        return modelAndView;
-    }
-    @RequestMapping("/departmentadd")
-    public ModelAndView departmentAdd(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("department/department_add.html :: add");
-        return modelAndView;
-    }
-
 
 }

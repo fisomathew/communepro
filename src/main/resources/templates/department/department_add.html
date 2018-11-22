@@ -5,19 +5,19 @@
         <div class="row mr-0" th:fragment="add">
 
             <div class="col-12 p-15">
-                <form action="#" method="POST">
+                <form method="POST" th:action="@{/department/save}" th:object="${department}">
                     <fieldset>
                         <legend class="m-b-15">Add new Department</legend>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name">
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" th:field="*{departmentName}">
                         </div>
                         <div class="form-group">
                             <label for="desc">Description</label>
-                            <input type="text" class="form-control" id="desc" placeholder="Description">
+                            <input type="text" class="form-control" id="desc" placeholder="Description" th:field="*{departmentDescription}">
                         </div>
 
-                        <button type="button" class="btn btn-primary m-r-5">Save</button>
+                        <button type="submit" class="btn btn-primary m-r-5">Save</button>
                         <button type="button" class="btn btn-default load-default-btn">Cancel</button>
                     </fieldset>
                 </form>

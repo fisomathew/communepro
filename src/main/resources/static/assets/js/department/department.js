@@ -1,5 +1,5 @@
 function loadDefaultContent(){
-    var url = '/pboard/departmentlist';
+    var url = '/department/list';
     $("#main-content").load(url,
         function(data){
         $('#list-table').DataTable({
@@ -10,7 +10,7 @@ function loadDefaultContent(){
     );
 }
 function addForm(){
-    var url = '/pboard/departmentadd';
+    var url = '/department/add';
     $("#main-content").load(url,
         function(data){
             $('.load-default-btn').click(function () {
