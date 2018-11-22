@@ -18,16 +18,16 @@ public class DepartmentController {
     @Autowired
     DepartmentServiceImpl departmentService;
 
-    @RequestMapping("/list")
+    @RequestMapping("/index")
     public ModelAndView departmentIndex(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("departments",departmentService.getAllDepartments());
         modelAndView.setViewName("department/department_index.html");
         return modelAndView;
     }
-    @RequestMapping("/departmentlist")
+    @RequestMapping("/list")
     public ModelAndView departmentList(){
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("departments",departmentService.getAllDepartments());
         modelAndView.setViewName("department/department_list.html :: list");
         return modelAndView;
     }

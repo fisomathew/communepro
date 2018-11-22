@@ -16,6 +16,19 @@ function addForm(){
             $('.load-default-btn').click(function () {
                 loadDefaultContent();
             });
+            var $form = $('#primaryForm');
+            $form.on('submit', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: $form.attr('action'),
+                    type: 'post',
+                    data: $form.serialize(),
+                    success: function(response) {
+                    // if the response contains any errors, replace the form
+                        loadDefaultContent();
+                    }
+                });
+            });
         }
     );
 }

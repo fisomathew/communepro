@@ -5,7 +5,7 @@
         <div class="row mr-0" th:fragment="add">
 
             <div class="col-12 p-15">
-                <form method="POST" th:action="@{/department/save}" th:object="${department}">
+                <form method="POST" th:action="@{/department/save}" th:object="${department}" id="primaryForm">
                     <fieldset>
                         <legend class="m-b-15">Add new Department</legend>
                         <div class="form-group">
