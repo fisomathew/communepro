@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div class="row mr-0" th:fragment="add">
+
+            <div class="col-12 p-15">
+                <form method="POST" th:action="@{/save}" th:object="${user}" id="primaryForm">
+                    <fieldset>
+                        <legend class="m-b-15">Add new User</legend>
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="First Name" th:field="*{firstName}" required autofocus>
+                        </div>
+                        <div class="form-group">
+                           <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name" th:field="*{lastName}" required autofocus>
+                        </div>
+                        <div class="form-group">
+                           <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="username@domain.com" th:field="*{email}" required autofocus>
+                        </div>
+ 						<div class="form-group">
+                           <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" th:field="*{password}" required autofocus>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-r-5">Save</button>
+                        <button type="button" class="btn btn-default load-default-btn">Cancel</button>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
