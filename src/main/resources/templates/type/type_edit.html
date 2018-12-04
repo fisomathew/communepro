@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div class="row mr-0" th:fragment="edit">
+
+            <div class="col-12 p-15">
+                <form method="PUT" th:action="@{/type/updateType}" th:object="${type}" id="primaryForm">
+                    <fieldset>
+                        <legend class="m-b-15">Edit Type</legend>
+                        <div class="form-group">
+                            <label for="typeName">Type Name</label>
+                            <input type="text" class="form-control" id="typeName" placeholder="Type Name" th:field="*{typeName}" required autofocus>
+                        </div>
+            
+                        <button type="submit" class="btn btn-primary m-r-5">Update</button>
+                        <button type="button" class="btn btn-default load-default-btn">Cancel</button>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

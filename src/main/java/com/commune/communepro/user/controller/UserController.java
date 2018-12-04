@@ -82,7 +82,7 @@ public class UserController {
 		return model;
 	}
 	@RequestMapping("/index")
-	public ModelAndView departmentIndex(){
+	public ModelAndView userIndex(){
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("user/user_index.html");
 		return modelAndView;

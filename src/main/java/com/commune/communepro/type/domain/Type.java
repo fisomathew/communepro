@@ -2,8 +2,17 @@ package com.commune.communepro.type.domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "type")
 public class Type {
-    private int typeId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private Long typeId;
     private String typeName;
     private int typeCreatedBy;
     private Date typeCreatedDate;
@@ -11,18 +20,18 @@ public class Type {
     public Type() {
     }
 
-    public Type(int typeId, String typeName, int typeCreatedBy, Date typeCreatedDate) {
+    public Type(Long typeId, String typeName, int typeCreatedBy, Date typeCreatedDate) {
         this.typeId = typeId;
         this.typeName = typeName;
         this.typeCreatedBy = typeCreatedBy;
         this.typeCreatedDate = typeCreatedDate;
     }
 
-    public int getTypeId() {
+    public Long getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(int typeId) {
+    public void setTypeId(Long typeId) {
         this.typeId = typeId;
     }
 
