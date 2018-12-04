@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.commune.communepro.board.domain.Board;
+import com.commune.communepro.board.service.BoardService;
 import com.commune.communepro.user.domain.User;
 import com.commune.communepro.user.service.UserService;
 
@@ -23,7 +25,8 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-
+	@Autowired
+	private BoardService boardService;
 
 	@RequestMapping(method=RequestMethod.GET,value= {"/", "/login"})
 	public ModelAndView login() {
@@ -71,6 +74,8 @@ public class UserController {
 		User user = userService.findUserByEmail(auth.getName());
 
 		model.addObject("userName", user.getFirstName() + " " + user.getLastName());
+		model.addObject("pboardlist", boardService.getAllBoards());
+		model.addObject("board",new Board());
 		model.setViewName("pboard/index");
 		return model;
 	}

@@ -2,18 +2,29 @@ package com.commune.communepro.board.domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "board")
 public class Board {
-    private int boardId;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private Long boardId;
+	
     private String boardName;
-    private int boardTypeId;
-    private int boardSubtypeId;
-    private int boardCreatedBy;
+    private Long boardTypeId;
+    private Long boardSubtypeId;
+    private Long boardCreatedBy;
     private Date boardCreatedDate;
 
     public Board() {
     }
 
-    public Board(int boardId, String boardName, int boardTypeId, int boardSubtypeId, int boardCreatedBy, Date boardCreatedDate) {
+    public Board(Long boardId, String boardName, Long boardTypeId, Long boardSubtypeId, Long boardCreatedBy, Date boardCreatedDate) {
         this.boardId = boardId;
         this.boardName = boardName;
         this.boardTypeId = boardTypeId;
@@ -22,11 +33,11 @@ public class Board {
         this.boardCreatedDate = boardCreatedDate;
     }
 
-    public int getBoardId() {
+    public Long getBoardId() {
         return boardId;
     }
 
-    public void setBoardId(int boardId) {
+    public void setBoardId(Long boardId) {
         this.boardId = boardId;
     }
 
@@ -38,27 +49,27 @@ public class Board {
         this.boardName = boardName;
     }
 
-    public int getBoardTypeId() {
+    public Long getBoardTypeId() {
         return boardTypeId;
     }
 
-    public void setBoardTypeId(int boardTypeId) {
+    public void setBoardTypeId(Long boardTypeId) {
         this.boardTypeId = boardTypeId;
     }
 
-    public int getBoardSubtypeId() {
+    public Long getBoardSubtypeId() {
         return boardSubtypeId;
     }
 
-    public void setBoardSubtypeId(int boardSubtypeId) {
+    public void setBoardSubtypeId(Long boardSubtypeId) {
         this.boardSubtypeId = boardSubtypeId;
     }
 
-    public int getBoardCreatedBy() {
+    public Long getBoardCreatedBy() {
         return boardCreatedBy;
     }
 
-    public void setBoardCreatedBy(int boardCreatedBy) {
+    public void setBoardCreatedBy(Long boardCreatedBy) {
         this.boardCreatedBy = boardCreatedBy;
     }
 
