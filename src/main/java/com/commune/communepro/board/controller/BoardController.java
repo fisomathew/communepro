@@ -27,4 +27,10 @@ public class BoardController {
 		modelAndView.setViewName("board/index");
 		return modelAndView;
 	}
+	@RequestMapping("/test")
+	public ModelAndView test(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("board/board_panel :: list");
+		return modelAndView;
+	}
 }
