@@ -1,8 +1,14 @@
 function changeBoard(obj){
     var txt = $(obj).text();
     $('#boardNameBtn').text(txt);
+    $("#boardPanel").load('/board/test',
+        function(data){
+            initBoard();
+        }
+    );
 }
-function loadBoard(id){
+function initBoard(){
+
 
     $( ".draggable-card" ).draggable({
         opacity: 0.7,
