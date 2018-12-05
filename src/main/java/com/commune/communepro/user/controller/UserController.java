@@ -76,7 +76,7 @@ public class UserController {
 		model.addObject("userName", user.getFirstName() + " " + user.getLastName());
 		model.addObject("pboardlist", boardService.getAllBoards());
 		model.addObject("board",new Board());
-		model.setViewName("pboard/index");
+		model.setViewName("board/index");
 		return model;
 	}
 

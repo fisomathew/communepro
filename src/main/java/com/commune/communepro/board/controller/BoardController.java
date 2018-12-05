@@ -24,7 +24,7 @@ public class BoardController {
 	public ModelAndView index(){
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("pboardlist", boardService.getAllBoards());
-		modelAndView.setViewName("pboard/index");
+		modelAndView.setViewName("board/index");
 		return modelAndView;
 	}
 }
