@@ -233,10 +233,11 @@
                     <button type="button" class="btn btn-dark dropdown-toggle toolbar1 pl-4 pr-4 rounded-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Program Board
                     </button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#"
-								th:each="pboard : ${pboardlist}" th:text="|${pboard.boardName}|"></a>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-right">
+                            <li th:each="pboard : ${pboardlist}">
+                                <a class="dropdown-item" href="#" th:text="|${pboard.boardName}|"></a></li>
+
+						</ul>
 					</div>
                 <a href="javascript:;" class="btn ml-2 btn-circle btn-icon btn-dark" style="margin-top: -6px;"><i class="fa fa-cog"></i></a>
             </div>

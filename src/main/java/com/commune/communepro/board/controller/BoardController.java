@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.commune.communepro.board.domain.Board;
 import com.commune.communepro.board.service.BoardService;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/board")
@@ -19,10 +20,11 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 
-	@RequestMapping(value="/list",method=RequestMethod.GET)
-	public List<Board> getAllBoards(){
-		return boardService.getAllBoards();
+	@RequestMapping("/")
+	public ModelAndView index(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("pboardlist", boardService.getAllBoards());
+		modelAndView.setViewName("pboard/index");
+		return modelAndView;
 	}
-	
-
 }
