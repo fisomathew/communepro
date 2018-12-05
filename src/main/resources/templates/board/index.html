@@ -236,7 +236,10 @@
 						<ul class="dropdown-menu dropdown-menu-right">
                             <li th:each="pboard : ${pboardlist}">
                                 <a class="dropdown-item" href="#" th:text="|${pboard.boardName}|" onclick="changeBoard(this)"></a></li>
-
+                            <li class="divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Create new Board</a></li>
+                            </li>
 						</ul>
 					</div>
                 <a href="javascript:;" class="btn ml-2 btn-circle btn-icon btn-dark" style="margin-top: -6px;"><i class="fa fa-cog"></i></a>
