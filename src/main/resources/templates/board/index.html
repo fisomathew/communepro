@@ -234,8 +234,8 @@
                         Program Board
                     </button>
 						<ul class="dropdown-menu dropdown-menu-right">
-                            <li th:each="pboard : ${pboardlist}">
-                                <a class="dropdown-item" href="#" th:text="|${pboard.boardName}|" onclick="changeBoard(this)"></a></li>
+                            <li th:each="board : ${boardlist}">
+                                <a class="dropdown-item" href="#" th:text="|${board.boardName}|" onclick="changeBoard(this)"></a></li>
 
 						</ul>
 					</div>

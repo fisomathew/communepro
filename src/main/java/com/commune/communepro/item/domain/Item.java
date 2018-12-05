@@ -2,18 +2,28 @@ package com.commune.communepro.item.domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "item")
 public class Item {
-    private int itemId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private Long itemId;
     private String itemName;
-    private int itemTypeId;
-    private int itemSubtypeId;
-    private int itemCreatedBy;
+    private Long itemTypeId;
+    private Long itemSubtypeId;
+    private Long itemCreatedBy;
     private Date itemCreatedDate;
 
     public Item() {
     }
 
-    public Item(int itemId, String itemName, int itemTypeId, int itemSubtypeId, int itemCreatedBy, Date itemCreatedDate) {
+    public Item(Long itemId, String itemName, Long itemTypeId, Long itemSubtypeId, Long itemCreatedBy, Date itemCreatedDate) {
         this.itemId = itemId;
         this.itemName = itemName;
         this.itemTypeId = itemTypeId;
@@ -22,11 +32,11 @@ public class Item {
         this.itemCreatedDate = itemCreatedDate;
     }
 
-    public int getItemId() {
+    public Long getItemId() {
         return itemId;
     }
 
-    public void setItemId(int itemId) {
+    public void setItemId(Long itemId) {
         this.itemId = itemId;
     }
 
@@ -38,27 +48,27 @@ public class Item {
         this.itemName = itemName;
     }
 
-    public int getItemTypeId() {
+    public Long getItemTypeId() {
         return itemTypeId;
     }
 
-    public void setItemTypeId(int itemTypeId) {
+    public void setItemTypeId(Long itemTypeId) {
         this.itemTypeId = itemTypeId;
     }
 
-    public int getItemSubtypeId() {
+    public Long getItemSubtypeId() {
         return itemSubtypeId;
     }
 
-    public void setItemSubtypeId(int itemSubtypeId) {
+    public void setItemSubtypeId(Long itemSubtypeId) {
         this.itemSubtypeId = itemSubtypeId;
     }
 
-    public int getItemCreatedBy() {
+    public Long getItemCreatedBy() {
         return itemCreatedBy;
     }
 
-    public void setItemCreatedBy(int itemCreatedBy) {
+    public void setItemCreatedBy(Long itemCreatedBy) {
         this.itemCreatedBy = itemCreatedBy;
     }
 
