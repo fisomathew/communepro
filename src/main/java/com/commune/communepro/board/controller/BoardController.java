@@ -28,13 +28,7 @@ public class BoardController {
 		modelAndView.setViewName("board/index");
 		return modelAndView;
 	}
-	
-	@RequestMapping("/test")
-	public ModelAndView test(){
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("board/board_panel :: list");
-		return modelAndView;
-	}
+
 	
 	@RequestMapping("/{id}/{typeid}/{subtypeid}")
 	public ModelAndView getBoardDeatils(@PathVariable Long id,@PathVariable Long typeid,@PathVariable Long subtypeid){
@@ -46,6 +40,7 @@ public class BoardController {
 	public ModelAndView getBoardDeatils(@PathVariable Long id,@PathVariable Long typeid){
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("itemlist", itemService.getItemByType(typeid));
+		modelAndView.setViewName("board/board_panel :: list");
 		return modelAndView;
 	}
 

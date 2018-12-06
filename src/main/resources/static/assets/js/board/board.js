@@ -1,7 +1,7 @@
 function changeBoard(obj){
     var txt = $(obj).text();
     $('#boardNameBtn').text(txt);
-    $("#boardPanel").load('/board/test',
+    $("#boardPanel").load('/1/15',
         function(data){
             initBoard();
         }
