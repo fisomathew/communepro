@@ -57,11 +57,11 @@
                 </div>
 
             </div>
-            <div class="row card-box draggable-card">
+            <div class="row card-box draggable-card" th:each="item : ${itemlist}">
                 <div class="col-md-12 border rounded bg-white">
                     <div class="row">
                         <div class="col-sm-6 text-success pt-2">
-                            <strong>Title</strong>
+                            <strong th:text="${item.itemName}"></strong>
                         </div>
                         <div class="col-sm-6 light-text text-right pt-2">
                             Description
