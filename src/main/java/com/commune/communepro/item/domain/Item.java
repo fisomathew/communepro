@@ -3,41 +3,51 @@ package com.commune.communepro.item.domain;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.commune.communepro.product.domain.Product;
 
 @Entity
 @Table(name = "item")
 public class Item {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private Long itemId;
+    private Long id;
     private String itemName;
     private Long itemTypeId;
     private Long itemSubtypeId;
     private Long itemCreatedBy;
     private Date itemCreatedDate;
-
+    
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "product_id")
+    private Product product;
+     
     public Item() {
     }
 
-    public Item(Long itemId, String itemName, Long itemTypeId, Long itemSubtypeId, Long itemCreatedBy, Date itemCreatedDate) {
-        this.itemId = itemId;
+    public Item(Long id, String itemName, Long itemTypeId, Long itemSubtypeId, Long itemCreatedBy, Date itemCreatedDate,Product product) {
+        this.id = id;
         this.itemName = itemName;
         this.itemTypeId = itemTypeId;
         this.itemSubtypeId = itemSubtypeId;
         this.itemCreatedBy = itemCreatedBy;
         this.itemCreatedDate = itemCreatedDate;
+        this.product=product;
     }
 
-    public Long getItemId() {
-        return itemId;
+    public Long getId() {
+        return id;
     }
 
-    public void setItemId(Long itemId) {
-        this.itemId = itemId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getItemName() {
@@ -79,4 +89,13 @@ public class Item {
     public void setItemCreatedDate(Date itemCreatedDate) {
         this.itemCreatedDate = itemCreatedDate;
     }
+
+    public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+    
 }

@@ -61,7 +61,7 @@
                 <div class="col-md-12 border rounded bg-white">
                     <div class="row">
                         <div class="col-sm-6 text-success pt-2">
-                            <strong th:text="${item.itemName}"></strong>
+                        	<strong th:text="${item.product.name}+':'+${item.itemName}"></strong>
                         </div>
                         <div class="col-sm-6 light-text text-right pt-2">
                             Description
